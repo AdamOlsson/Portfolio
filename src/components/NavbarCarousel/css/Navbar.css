@@ -1,0 +1,62 @@
+#nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+#nav li {
+    display: inline-block;
+    padding-left: 50px;
+    padding-right: 50px;
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+.moveleftrelative {
+    position: relative;
+    left: 30px;
+}
+
+.moveleftonce {
+    -webkit-transform: translate(-50px,0);
+    -moz-transform: translate(-50px,0);
+    -o-transform: translate(-50px,0);
+    -ms-transform: translate(-50px,0);
+    transform: translate(-50px,0);
+}
+
+.movelefttwice {
+    -webkit-transform: translate(-50px,0);
+    -moz-transform: translate(-50px,0);
+    -o-transform: translate(-50px,0);
+    -ms-transform: translate(-50px,0);
+    transform: translate(-50px,0);
+}
+
+.moveleftthrice {
+    -webkit-transform: translate(-50px,0);
+    -moz-transform: translate(-50px,0);
+    -o-transform: translate(-50px,0);
+    -ms-transform: translate(-50px,0);
+    transform: translate(-50px,0);
+}
+
