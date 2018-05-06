@@ -1,29 +1,21 @@
 #nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    display: inline-block;
-    text-align: center;
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    transition: transform 0.3s;
 }
 
 #nav li {
-    display: inline-block;
-    padding-left: 50px;
-    padding-right: 50px;
-    -webkit-transition: 1s ease-in-out;
-    -moz-transition: 1s ease-in-out;
-    -o-transition: 1s ease-in-out;
-    transition: 1s ease-in-out;
-}
-
-li a {
-    display: block;
-    color: white;
+    width: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
 /* Change the link color to #111 (black) on hover */
@@ -31,32 +23,13 @@ li a:hover {
     background-color: #111;
 }
 
-.moveleftrelative {
-    position: relative;
-    left: 30px;
+.depth-0 {
+    background-color: peru
+}
+.depth-1 {
+    background-color: purple
 }
 
-.moveleftonce {
-    -webkit-transform: translate(-50px,0);
-    -moz-transform: translate(-50px,0);
-    -o-transform: translate(-50px,0);
-    -ms-transform: translate(-50px,0);
-    transform: translate(-50px,0);
+.depth-2 {
+    background-color: blue
 }
-
-.movelefttwice {
-    -webkit-transform: translate(-50px,0);
-    -moz-transform: translate(-50px,0);
-    -o-transform: translate(-50px,0);
-    -ms-transform: translate(-50px,0);
-    transform: translate(-50px,0);
-}
-
-.moveleftthrice {
-    -webkit-transform: translate(-50px,0);
-    -moz-transform: translate(-50px,0);
-    -o-transform: translate(-50px,0);
-    -ms-transform: translate(-50px,0);
-    transform: translate(-50px,0);
-}
-

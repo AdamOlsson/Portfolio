@@ -3,20 +3,37 @@ import './css/Navbar.css';
 import NavbarItem from './NavbarItem';
 
 export default class Navbar extends Component {
+
     constructor() {
         super();
-        this.keyCount = 0;
+        this.keyCount = 0;        
+
         this.state = {
             headlines: ["Home", "About Me", "Projects", "Contact"],
-            activeItem: 0
+            activeItem: 0,
+            offset: this.centerItem(0)
         };
+
+        this.onClick = this.onClick.bind(this);
     }
 
     onClick(pos) {
         this.setState({
-            activeItem: pos
+            activeItem: pos,
+            offset: this.centerItem(pos)
         });
-        console.log(pos);
+    }
+
+    centerItem(itemNumber) {
+        var x = ((2-itemNumber)*100) -50;
+        const trans = { 
+            transform: `translate(${x}px)` 
+        };
+        return trans;
+    }
+
+    setDepth(pos) {
+
     }
 
     render() {
@@ -26,13 +43,14 @@ export default class Navbar extends Component {
                 key={this.keyCount++}
                 text={headline} 
                 pos={pos++} 
-                onClick={this.onClick.bind(this)}
+                onClick={this.onClick}
+                depth='depth-0'
             />
         });
-        console.log(items);
+
         return(
             <div id="nav" className="navbar">
-                <ul>
+                <ul style={this.state.offset}>
                     {items}
                 </ul>
             </div>

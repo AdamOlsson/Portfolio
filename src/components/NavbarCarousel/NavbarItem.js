@@ -6,12 +6,15 @@ export default class NavbarItem extends Component {
     constructor(props) {
         super(props);
         this.handleMouseHover = this.handleMouseHover.bind(this);
-        this.handleMouseClick = this.handleMouseClick.bind(this);
+        this.pos = props.pos;
+        this.text = props.text;
         this.state = {
-            text: props.text,
             isHovering: false,
-            isActive: false
+            isActive: false,
+            depth: props.depth
         };
+
+        this.onClick = this.onClick.bind(this);
     }
 
     handleMouseHover() {
@@ -24,15 +27,8 @@ export default class NavbarItem extends Component {
         };
     }
 
-    handleMouseClick() {
-        this.setState(this.toggleActiveState);
-        this.props.onClick(this.props.pos);
-    }
-
-    toggleActiveState(state) {
-        return {
-            isActive: !state.isActive
-        };
+    onClick() {
+        this.props.onClick(this.pos);
     }
 
     render() {
@@ -48,10 +44,10 @@ export default class NavbarItem extends Component {
             <li
                 onMouseEnter={this.handleMouseHover}
                 onMouseLeave={this.handleMouseHover}
-                style={ this.state.isHovering ? testStyle2 : testStyle1}
-                pos={this.state.pos}
-                onClick={this.handleMouseClick}
-            >{ this.state.text }</li>
+                //style={ this.state.isHovering ? testStyle1 : testStyle2 }
+                onClick={this.onClick}
+                className={this.state.depth}
+            >{ this.text }</li>
         );
     }
 }
