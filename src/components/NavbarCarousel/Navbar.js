@@ -7,9 +7,9 @@ export default class Navbar extends Component {
     constructor() {
         super();
         this.keyCount = 0;        
-
         this.state = {
-            headlines: ["Home", "About Me", "Projects", "Contact"],
+            headlines: ["Home", "About Me", "Projects", "Contact"], // is there a better way to do this?
+            depths: ["depth-0", "depth-1", "depth-2", "depth-3"],
             activeItem: 0,
             offset: this.centerItem(0)
         };
@@ -25,7 +25,8 @@ export default class Navbar extends Component {
     }
 
     centerItem(itemNumber) {
-        var x = ((2-itemNumber)*100) -50;
+        // requires each item to be 100px wide
+        var x = ((2-itemNumber)*190) -85;
         const trans = { 
             transform: `translate(${x}px)` 
         };
@@ -39,12 +40,13 @@ export default class Navbar extends Component {
     render() {
         var pos = 0;
         var items = this.state.headlines.map((headline) => {
+            var depth = Math.abs(this.state.activeItem - pos);
             return <NavbarItem 
                 key={this.keyCount++}
-                text={headline} 
+                text={headline}
+                depth={this.state.depths[depth]} // will be same on init
                 pos={pos++} 
                 onClick={this.onClick}
-                depth='depth-0'
             />
         });
 

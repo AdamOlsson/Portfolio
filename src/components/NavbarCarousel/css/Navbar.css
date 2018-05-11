@@ -1,3 +1,5 @@
+@import url('https://fonts.google.com/specimen/Open+Sans');
+
 #nav ul {
     list-style: none;
     display: flex;
@@ -8,28 +10,32 @@
 }
 
 #nav li {
-    width: 80px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
     text-align: center;
     -webkit-transition: 0.2s ease-in-out;
     -moz-transition: 0.2s ease-in-out;
     -o-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: #111;
+    font-family: 'Open Sans';
 }
 
 .depth-0 {
-    background-color: peru
+    width: 180px;
+    font-size: 30pt
 }
+
 .depth-1 {
-    background-color: purple
+    width: 140px;
+    font-size: 25pt
 }
 
 .depth-2 {
-    background-color: blue
+    width: 120px;
+    font-size: 20pt
+}
+
+.depth-3 {
+    width: 100px;
+    font-size: 15pt
 }
