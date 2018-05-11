@@ -32,19 +32,10 @@ export default class NavbarItem extends Component {
     }
 
     render() {
-        const testStyle1 = {
-            backgroundColor: "#F6BB42"
-        };
-
-        const testStyle2 = {
-            backgroundColor: "#81b71a"
-        };
-
         return(
             <li
                 onMouseEnter={this.handleMouseHover}
                 onMouseLeave={this.handleMouseHover}
-                //style={ this.state.isHovering ? testStyle1 : testStyle2 }
                 onClick={this.onClick}
                 className={this.state.depth}
             >{ this.text }</li>

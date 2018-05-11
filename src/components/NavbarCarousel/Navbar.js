@@ -25,7 +25,7 @@ export default class Navbar extends Component {
     }
 
     centerItem(itemNumber) {
-        // requires each item to be 100px wide
+        //TODO: Get ul width automatically
         var x = ((2-itemNumber)*190) -85;
         const trans = { 
             transform: `translate(${x}px)` 
