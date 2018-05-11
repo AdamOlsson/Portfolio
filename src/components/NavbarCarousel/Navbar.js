@@ -6,10 +6,10 @@ export default class Navbar extends Component {
 
     constructor() {
         super();
-        this.keyCount = 0;        
+        this.keyCount = 0;
+        this.headlines = ["Home", "About Me", "Projects", "Contact"];
+        this.depths = ["depth-0", "depth-1", "depth-2", "depth-3"];
         this.state = {
-            headlines: ["Home", "About Me", "Projects", "Contact"], // is there a better way to do this?
-            depths: ["depth-0", "depth-1", "depth-2", "depth-3"],
             activeItem: 0,
             offset: this.centerItem(0)
         };
@@ -39,12 +39,12 @@ export default class Navbar extends Component {
 
     render() {
         var pos = 0;
-        var items = this.state.headlines.map((headline) => {
+        var items = this.headlines.map((headline) => {
             var depth = Math.abs(this.state.activeItem - pos);
             return <NavbarItem 
                 key={this.keyCount++}
                 text={headline}
-                depth={this.state.depths[depth]} // will be same on init
+                depth={this.depths[depth]} // will be same on init
                 pos={pos++} 
                 onClick={this.onClick}
             />
