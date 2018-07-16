@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
-
+import { Link, Route, Switch } from 'react-router-dom';
 
 export default class NavbarItem extends Component {
 
     constructor(props) {
-        super(props);
-        this.handleMouseHover = this.handleMouseHover.bind(this);
+        super(props);  
         this.pos = props.pos;
-        this.text = props.text;
         this.state = {
             isHovering: false,
             isActive: false,
             depth: props.depth
         };
 
+        this.handleMouseHover = this.handleMouseHover.bind(this);
         this.onClick = this.onClick.bind(this);
     }
 
@@ -38,7 +37,7 @@ export default class NavbarItem extends Component {
                 onMouseLeave={this.handleMouseHover}
                 onClick={this.onClick}
                 className={this.state.depth}
-            >{ this.text }</li>
+            ><Link to={this.props.path}>{ this.props.text }</Link></li>
         );
     }
 }

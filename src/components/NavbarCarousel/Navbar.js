@@ -15,13 +15,15 @@ export default class Navbar extends Component {
         };
 
         this.onClick = this.onClick.bind(this);
+        //this.navbar = this.createNavbar();
     }
 
     onClick(pos) {
         this.setState({
             activeItem: pos,
-            offset: this.centerItem(pos)
+            offset: this.centerItem(pos),
         });
+
     }
 
     centerItem(itemNumber) {
@@ -33,27 +35,44 @@ export default class Navbar extends Component {
         return trans;
     }
 
-    setDepth(pos) {
-
-    }
-
     render() {
-        var pos = 0;
-        var items = this.headlines.map((headline) => {
-            var depth = Math.abs(this.state.activeItem - pos);
-            return <NavbarItem 
-                key={this.keyCount++}
-                text={headline}
-                depth={this.depths[depth]} // will be same on init
-                pos={pos++} 
-                onClick={this.onClick}
-            />
-        });
 
+        var pos = 0;
         return(
             <div id="nav" className="navbar">
                 <ul style={this.state.offset}>
-                    {items}
+                    <NavbarItem 
+                        key={pos}
+                        text={"Home"}
+                        depth={this.depths[Math.abs(this.state.activeItem - pos)]}
+                        onClick={this.onClick}
+                        path="/home"
+                        pos={pos++}
+                    />
+                    <NavbarItem 
+                        key={pos}
+                        text={"About Me"}
+                        depth={this.depths[[Math.abs(this.state.activeItem - pos)]]} // will be same on init 
+                        onClick={this.onClick}
+                        path="/about"
+                        pos={pos++}
+                    />
+                    <NavbarItem 
+                        key={pos}
+                        text={"Projects"}
+                        depth={this.depths[[Math.abs(this.state.activeItem - pos)]]} // will be same on init 
+                        onClick={this.onClick}
+                        path="/projects"
+                        pos={pos++}
+                    />
+                    <NavbarItem 
+                        key={pos}
+                        text={"Contact"}
+                        depth={this.depths[[Math.abs(this.state.activeItem - pos)]]} // will be same on init 
+                        onClick={this.onClick}
+                        path="/contact"
+                        pos={pos++}
+                    />
                 </ul>
             </div>
         );

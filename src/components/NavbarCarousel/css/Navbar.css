@@ -13,29 +13,43 @@
     margin-left: 5px;
     margin-right: 5px;
     text-align: center;
-    -webkit-transition: 0.2s ease-in-out;
-    -moz-transition: 0.2s ease-in-out;
-    -o-transition: 0.2s ease-in-out;
-    transition: 0.2s ease-in-out;
+    -webkit-transition: font-size 1s;
+    -moz-transition: font-size 1s;
+    -o-transition: font-size 1s;
+    transition: font-size 1s;
     font-family: 'Open Sans';
+    background-color: aquamarine;
 }
+
+/* #nav li:hover {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+} */
 
 .depth-0 {
     width: 180px;
-    font-size: 30pt
+    /* transform: scale(1);
+    -webkit-transform: scale(1); */
+    font-size: 30pt;
 }
 
 .depth-1 {
-    width: 140px;
+    width: 160px;
+    /* transform: scale(0.8);
+    -webkit-transform: scale(0.8); */
     font-size: 25pt
 }
 
 .depth-2 {
     width: 120px;
-    font-size: 20pt
+    /* transform: scale(0.5);
+    -webkit-transform: scale(0.5); */
+    font-size: 20pt;
 }
 
 .depth-3 {
     width: 100px;
-    font-size: 15pt
+    /* transform: scale(0.3);
+    -webkit-transform: scale(0.3); */
+    font-size: 15pt;
 }
