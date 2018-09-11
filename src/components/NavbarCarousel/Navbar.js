@@ -23,7 +23,7 @@ export default class Navbar extends Component {
             activeItem: pos,
             offset: this.centerItem(pos),
         });
-
+        console.log(this.state.activeItem);
     }
 
     centerItem(itemNumber) {
