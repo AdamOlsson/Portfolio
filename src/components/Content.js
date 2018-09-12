@@ -1,19 +1,34 @@
-import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom'
+import React from 'react';
+import { Switch, Route, withRouter } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
+
 import About from './main-contents/About'
 import Contact from './main-contents/Contact'
 import Projects from './main-contents/Projects'
 import Home from './main-contents/Home'
 
-export default class Content extends Component {
-    render() {
-        return(
-            <Switch>
-                <Route exact path='/home' component={Home}/>
-                <Route path='/about' component={About}/>
-                <Route path='/contact' component={Contact}/>
-                <Route path='/projects' component={Projects}/>
-            </Switch>
-        );
-    }
+import './Content.css'
+
+
+function Content({ location }) {
+    return (
+        <div>
+            <TransitionGroup className="transition-group">
+                <CSSTransition key={location.key} timeout={{ enter: 300, exit: 300 }} classNames="fade">
+                    <section className="route-section">
+                        <div className="main-content">
+                        <Switch location={location}>
+                            <Route exact path='/home' component={Home}/>
+                            <Route path='/about' component={About}/>
+                            <Route path='/contact' component={Contact}/>
+                            <Route path='/projects' component={Projects}/>
+                        </Switch>
+                        </div>
+                    </section>
+                </CSSTransition>
+            </TransitionGroup>
+        </div>
+    );
 }
+
+export default withRouter(Content);

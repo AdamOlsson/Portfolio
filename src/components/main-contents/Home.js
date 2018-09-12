@@ -5,10 +5,10 @@ import '../../App.css';
 export default class Home extends Component {
     render() {
         return(
-            <div className="page-header">
-                <h1>Home</h1>
+            <div>
+                <h3>Home</h3>
                 <div>
-                    This is the online portfolio of Adam Olsson, an engineering student from Sweden.
+                    <p>This is the online portfolio of Adam Olsson, an engineering student from Sweden.</p>
                 </div>
             </div>
         );

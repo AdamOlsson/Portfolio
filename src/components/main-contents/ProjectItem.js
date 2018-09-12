@@ -2,7 +2,7 @@ import React from 'react';
 import './css/ProjectItem.css'
 
 const ProjectItem = (props) => {
-    const format = props.formatRight ? 'right' : '';
+    const format = props.formatRight ? 'right' : 'left';
     return(
         <div className={"projectItem"}>
             <div className={"image-container " + format}>

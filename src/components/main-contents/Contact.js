@@ -8,7 +8,7 @@ import './css/Contact.css';
 export default class Contact extends Component {
     render() {
         return(
-            <div className="page-header">
+            <div>
                 <h2>Contact Me</h2>
                 <h3><FaLinkedin /></h3>
                 <h3><IoIosMailUnread /></h3>
