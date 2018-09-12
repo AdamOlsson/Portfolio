@@ -8,10 +8,10 @@ export default class Navbar extends Component {
         super();
         this.keyCount = 0;
         this.headlines = ["Home", "About Me", "Projects", "Contact"];
-        this.depths = ["depth-0", "depth-1", "depth-2", "depth-3"];
+        //this.depths = ["depth-0", "depth-1", "depth-2", "depth-3"];
         this.state = {
             activeItem: 0,
-            offset: this.centerItem(0)
+            //offset: this.centerItem(0)
         };
 
         this.onClick = this.onClick.bind(this);
@@ -21,11 +21,12 @@ export default class Navbar extends Component {
     onClick(pos) {
         this.setState({
             activeItem: pos,
-            offset: this.centerItem(pos),
+            //offset: this.centerItem(pos),
         });
         console.log(this.state.activeItem);
     }
 
+    /* can probably remove*/
     centerItem(itemNumber) {
         //TODO: Get ul width automatically
         var x = ((2-itemNumber)*190) -85;
@@ -44,7 +45,7 @@ export default class Navbar extends Component {
                     <NavbarItem 
                         key={pos}
                         text={"Home"}
-                        depth={this.depths[Math.abs(this.state.activeItem - pos)]}
+                        //depth={this.depths[Math.abs(this.state.activeItem - pos)]}
                         onClick={this.onClick}
                         path="/home"
                         pos={pos++}
@@ -52,7 +53,7 @@ export default class Navbar extends Component {
                     <NavbarItem 
                         key={pos}
                         text={"About Me"}
-                        depth={this.depths[[Math.abs(this.state.activeItem - pos)]]} // will be same on init 
+                        //depth={this.depths[[Math.abs(this.state.activeItem - pos)]]} // will be same on init 
                         onClick={this.onClick}
                         path="/about"
                         pos={pos++}
@@ -60,7 +61,7 @@ export default class Navbar extends Component {
                     <NavbarItem 
                         key={pos}
                         text={"Projects"}
-                        depth={this.depths[[Math.abs(this.state.activeItem - pos)]]} // will be same on init 
+                        //depth={this.depths[[Math.abs(this.state.activeItem - pos)]]} // will be same on init 
                         onClick={this.onClick}
                         path="/projects"
                         pos={pos++}
@@ -68,7 +69,7 @@ export default class Navbar extends Component {
                     <NavbarItem 
                         key={pos}
                         text={"Contact"}
-                        depth={this.depths[[Math.abs(this.state.activeItem - pos)]]} // will be same on init 
+                        //depth={this.depths[[Math.abs(this.state.activeItem - pos)]]} // will be same on init 
                         onClick={this.onClick}
                         path="/contact"
                         pos={pos++}

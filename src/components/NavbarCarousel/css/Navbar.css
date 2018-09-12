@@ -1,7 +1,6 @@
 @import url('https://fonts.google.com/specimen/Open+Sans');
 
 
-
 #nav ul {
     list-style: none;
     width: 80%;
@@ -23,6 +22,7 @@
     font-family: 'Open Sans';
     background-color: aquamarine;
 }
+
 
 /* #nav li:hover {
     transform: scale(1.0);
