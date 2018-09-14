@@ -6,7 +6,7 @@
     margin-top: 5px;
 }
 
-img {
+.image-container img {
     max-height: 100%;
     width: auto;
     border-radius: 60%;

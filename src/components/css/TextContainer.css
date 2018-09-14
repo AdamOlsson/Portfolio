@@ -1,0 +1,7 @@
+@import url('../../rsc/fonts/fonts.css');
+
+.text-container {
+    color: white;
+    text-decoration: none;
+    font-family: 'Hero';
+}

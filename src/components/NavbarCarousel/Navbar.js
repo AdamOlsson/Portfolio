@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import './css/Navbar.css';
+
 import NavbarItem from './NavbarItem';
+
+import './css/Navbar.css';
+
 
 export default class Navbar extends Component {
 
@@ -19,7 +22,6 @@ export default class Navbar extends Component {
         this.setState({
             activeItem: pos,
         });
-        console.log(this.state.activeItem);
     }
 
     render() {
@@ -28,28 +30,28 @@ export default class Navbar extends Component {
             <div id="nav" className="navbar">
                 <ul style={this.state.offset}>
                     <NavbarItem 
-                        key={pos}
+                        key={this.keyCount++}
                         text={"Home"}
                         onClick={this.onClick}
                         path="/home"
                         pos={pos++}
                     />
                     <NavbarItem 
-                        key={pos}
+                        key={this.keyCount++}
                         text={"About Me"}
                         onClick={this.onClick}
                         path="/about"
                         pos={pos++}
                     />
                     <NavbarItem 
-                        key={pos}
+                        key={this.keyCount++}
                         text={"Projects"}
                         onClick={this.onClick}
                         path="/projects"
                         pos={pos++}
                     />
                     <NavbarItem 
-                        key={pos}
+                        key={this.keyCount++}
                         text={"Contact"}
                         onClick={this.onClick}
                         path="/contact"

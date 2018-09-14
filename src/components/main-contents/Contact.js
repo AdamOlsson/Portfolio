@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { FaLinkedin, FaGithubSquare} from 'react-icons/fa';
 import { IoIosMailUnread } from 'react-icons/io';
-import '../../App.css';
 import './css/Contact.css';
 
 

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
+import './css/NavbarItem.css';
+import '../css/TextContainer.css';
 
 export default class NavbarItem extends Component {
 
@@ -9,7 +11,6 @@ export default class NavbarItem extends Component {
         this.state = {
             isHovering: false,
             isActive: false,
-            depth: props.depth
         };
 
         this.handleMouseHover = this.handleMouseHover.bind(this);
@@ -36,7 +37,7 @@ export default class NavbarItem extends Component {
                 onMouseEnter={this.handleMouseHover}
                 onMouseLeave={this.handleMouseHover}
                 onClick={this.onClick}
-                className={this.state.depth}
+                className='text-container'
             ><Link to={this.props.path}>{ this.props.text }</Link></li>
         );
     }

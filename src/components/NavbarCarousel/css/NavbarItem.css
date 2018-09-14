@@ -1,0 +1,25 @@
+li {
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    
+    font-size: 30pt;
+
+    background-color: rgba(248, 253, 254, 0.5);
+
+    -webkit-transition: font-size 1s;
+    -moz-transition: font-size 1s;
+    -o-transition: font-size 1s;
+    transition: font-size 1s;
+}
+
+li:hover {
+    font-size: 40pt;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+    font-family: inherit;
+}
+

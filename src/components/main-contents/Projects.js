@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../../App.css';
 import './css/ProjectList.css';
 import ProjectItem from './ProjectItem';
 import Image1 from './tomato1.jpg';

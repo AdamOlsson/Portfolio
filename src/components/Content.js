@@ -7,7 +7,7 @@ import Contact from './main-contents/Contact'
 import Projects from './main-contents/Projects'
 import Home from './main-contents/Home'
 
-import './Content.css'
+import './css/Content.css'
 
 
 function Content({ location }) {

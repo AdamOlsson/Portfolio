@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Hero Light';
+    src: url('Hero_Light/hero_light-webfont.eot'); /* IE9 Compat Modes */
+    src: url('Hero_Light/hero_light-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Hero_Light/hero_light-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+         url('Hero_Light/hero_light-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('Hero_Light/hero_light-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('Hero_Light/hero_light-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hero';
+    src: url('Hero/hero-webfont.eot');
+    src: url('Hero/hero-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Hero/hero-webfont.woff2') format('woff2'),
+         url('Hero/hero-webfont.woff') format('woff'),
+         url('Hero/hero-webfont.ttf') format('truetype'),
+         url('Hero/hero-webfont.svg#heroregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
