@@ -15,6 +15,10 @@
 }
 
 div.transition-group {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
     position: relative;
 }
 
@@ -24,11 +28,12 @@ section.route-section {
     left: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 100%;
+    height: inherit;
 }
 
 .main-content {
     width: 50%;
-    align-content: center;
+    display: flex;
+    justify-content: center;
 }

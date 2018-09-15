@@ -12,7 +12,6 @@ import './css/Content.css'
 
 function Content({ location }) {
     return (
-        <div>
             <TransitionGroup className="transition-group">
                 <CSSTransition key={location.key} timeout={{ enter: 300, exit: 300 }} classNames="fade">
                     <section className="route-section">
@@ -27,7 +26,6 @@ function Content({ location }) {
                     </section>
                 </CSSTransition>
             </TransitionGroup>
-        </div>
     );
 }
 
